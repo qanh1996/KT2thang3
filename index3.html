@@ -5,9 +5,25 @@
     <title>Title</title>
 </head>
 <body>
+<input id="input" type="text"/>
+<button onclick="doiKT()">Doi Kieu Chu</button>
+<output id="xem"></output>
 <script>
-    let string = prompt('nhap chu in thuong');
-    alert(string.toUpperCase())
+    function doiKT() {
+        let char = document.getElementById("input").value;
+        let length = char.length;
+        let rs = '';
+        for (let i = 0; i < length; i++) {
+            let a = char[i];
+            if (a === a.toLowerCase()) {
+                rs = rs + a.toUpperCase();
+            }
+            else {
+                rs = rs + a.toLowerCase();
+            }
+        }
+        document.getElementById("xem").innerText = rs;
+    }
 </script>
 </body>
 </html>
