@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+   let numbers = prompt('nhap vao day so');
+   let a =numbers.toString();
+   let rs = [a[0]];
+   for (let i = 0; i <=a.length ; i++) {
+       if (a[i]%2==0){
+           rs.push('-', a[i])
+       }else {
+           rs.push(a[i])
+       }
+   }
+   document.write(rs)
+</script>
+</body>
+</html>
